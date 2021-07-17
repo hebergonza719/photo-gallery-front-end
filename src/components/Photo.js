@@ -15,8 +15,8 @@ const Photo = ({ id, dispatch }) => {
   return (
     <div className="photo-container">
       <Item className="new-photo"
-        original={`http://localhost:3300/photos/${id}`}
-        thumbnail={`http://localhost:3300/photos/${id}`}
+        original={`${REACT_APP_BACKEND_URL}/photos/${id}`}
+        thumbnail={`${REACT_APP_BACKEND_URL}/photos/${id}`}
         width="1024"
         height="768"
       >
@@ -24,7 +24,7 @@ const Photo = ({ id, dispatch }) => {
           <img className="photo"
             ref={ref} 
             onClick={open} 
-            src={`http://localhost:3300/photos/${id}`}
+            src={`${REACT_APP_BACKEND_URL}/photos/${id}`}
             alt="user selected file"
           />
         )}
